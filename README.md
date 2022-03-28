@@ -8,11 +8,11 @@
 
 ## Technologies
 
-* Java
-* Spring Boot Reactive
+* Java - 17
+* Spring Boot Reactive - 2.6.5
 * Spring Doc Reactive
 * MongoDB Reactive
-* Maven](https://maven.apache.org/)
+* Maven
 
 ## Usage
 
