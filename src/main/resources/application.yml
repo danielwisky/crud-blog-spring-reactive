@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: friends
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/blog
+      auto-index-creation: true
