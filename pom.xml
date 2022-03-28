@@ -20,6 +20,7 @@
     <commons-collections4.version>4.4</commons-collections4.version>
     <java.version>17</java.version>
     <springdoc-openapi-webflux-ui.version>1.6.6</springdoc-openapi-webflux-ui.version>
+    <fixture-factory.version>3.1.0</fixture-factory.version>
   </properties>
 
   <dependencies>
@@ -56,6 +57,7 @@
       <optional>true</optional>
     </dependency>
 
+    <!-- test -->
     <dependency>
       <artifactId>spring-boot-starter-test</artifactId>
       <groupId>org.springframework.boot</groupId>
@@ -64,6 +66,12 @@
     <dependency>
       <artifactId>reactor-test</artifactId>
       <groupId>io.projectreactor</groupId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>br.com.six2six</groupId>
+      <artifactId>fixture-factory</artifactId>
+      <version>${fixture-factory.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
