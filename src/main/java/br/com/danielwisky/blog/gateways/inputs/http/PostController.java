@@ -12,6 +12,7 @@ import br.com.danielwisky.blog.gateways.inputs.http.resources.response.PostRespo
 import br.com.danielwisky.blog.usecases.UpdatePost;
 import io.swagger.v3.oas.annotations.Operation;
 import javax.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,7 +28,11 @@ import reactor.core.publisher.Mono;
 
 @RestController
 @RequestMapping("/api/v1/posts")
-public record PostController(PostDataGateway postDataGateway, UpdatePost updatePost) {
+@RequiredArgsConstructor
+public class PostController {
+
+  private final PostDataGateway postDataGateway;
+  private final UpdatePost updatePost;
 
   @PostMapping
   @ResponseStatus(HttpStatus.OK)

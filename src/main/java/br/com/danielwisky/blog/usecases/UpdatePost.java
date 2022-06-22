@@ -3,11 +3,15 @@ package br.com.danielwisky.blog.usecases;
 import br.com.danielwisky.blog.domains.Post;
 import br.com.danielwisky.blog.domains.exceptions.ResourceNotFoundException;
 import br.com.danielwisky.blog.gateways.PostDataGateway;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
 @Component
-public record UpdatePost(PostDataGateway postDataGateway) {
+@RequiredArgsConstructor
+public class UpdatePost {
+
+  private final PostDataGateway postDataGateway;
 
   public Mono<Post> execute(final String id, final Post post) {
     return postDataGateway.findById(id)

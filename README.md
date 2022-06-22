@@ -9,8 +9,8 @@
 ## Technologies
 
 * Java - 17
-* Spring Boot Reactive - 2.6.5
-* Spring Doc Reactive
+* Spring Boot Reactive - 2.7.0
+* Spring DOC Reactive
 * MongoDB Reactive
 * Maven
 
